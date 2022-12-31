@@ -1,0 +1,41 @@
+.trafficLight {
+  border: 2px solid grey;
+  background-color: lightgrey;
+  
+}
+.flex {
+  display: flex;
+}
+.upperSection {
+  margin-bottom: 8em;
+}
+.lowerSection {
+  margin-top: 5em;
+}
+.right {
+  background-color: #4B4E53;
+  width: 30%;
+  height: 35%;
+}
+.left {
+  background-color: #4B4E53;
+  margin-right: 8em;
+  width: 30%;
+  height: 35%;
+  justify-content: left;
+}
+.intersection {
+  background-color:  #939598;
+}
+.timer {
+  font-family: 'digital';
+  color:#b30000;
+  background-color: black;
+  height: 1em;
+  padding: 2px 2px;
+}
+
+@font-face {
+  font-family: 'digital';
+  src: url('./static/fonts/digital-7.regular.ttf');
+}
