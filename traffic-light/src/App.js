@@ -4,9 +4,9 @@ import Intersection from './pages/Intersection'
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+      <div className="container">
         <Intersection/>
-      </header>
+      </div>
     </div>
   );
 }

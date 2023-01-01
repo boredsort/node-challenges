@@ -4,11 +4,13 @@ const TrafficLight = () => {
   return (
     <>
       <div className="trafficLight">
-        <Bulb assignedColor="green" on={1} />
+        <Bulb assignedColor="red" on={1} />
         <br/>
         <Bulb assignedColor="orange" />
         <br/>
-        <Bulb assignedColor="red" />
+        <Bulb assignedColor="green" />
+        <br/>
+        <Bulb assignedColor="green" turn="left" />
         <br/>
       </div>
     </>

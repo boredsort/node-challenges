@@ -6,23 +6,33 @@
 .flex {
   display: flex;
 }
+.flex-right {
+  justify-content: flex-end;
+}
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-space-between {
+  justify-content: space-between;
+}
 .upperSection {
-  margin-bottom: 8em;
+  margin-bottom: 2em;
 }
 .lowerSection {
-  margin-top: 5em;
+  margin-top: 2em;
 }
 .right {
   background-color: #4B4E53;
-  width: 30%;
+  width: 45%;
   height: 35%;
+  margin-left: 2em;
 }
 .left {
   background-color: #4B4E53;
-  margin-right: 8em;
-  width: 30%;
+  margin-right: 2em;
+  width: 45%;
   height: 35%;
-  justify-content: left;
 }
 .intersection {
   background-color:  #939598;
@@ -35,6 +45,19 @@
   padding: 2px 2px;
 }
 
+.street{
+  margin: 0 1em 0 1em;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+  
+}
+
+.App {
+  height: 100%;
+}
 @font-face {
   font-family: 'digital';
   src: url('./static/fonts/digital-7.regular.ttf');
