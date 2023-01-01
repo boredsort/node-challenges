@@ -10,7 +10,6 @@ const Bulb = ({assignedColor, on}) => {
       setOnState(true)
     }
 
-    console.log('color: ', color)
     if (onState == true) {
         if (assignedColor) {
           setColor(assignedColor)
