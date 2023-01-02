@@ -4,6 +4,10 @@ const Bulb = ({ assignedColor, on, turn }) => {
   let [color, setColor] = useState("grey");
   let [onState, setOnState] = useState(false);
 
+  const turnOn = (state) => {
+    setOnState(state)
+  }
+ 
   useEffect(() => {
     if (on > 0) {
       setOnState(true);
