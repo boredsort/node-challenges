@@ -5,6 +5,9 @@ import { east as East } from "../component/street/east";
 import { west as West } from "../component/street/west";
 import Timer from "../component/Timer";
 import { useState } from "react";
+import {status} from '../constants/status';
+import {direction} from '../constants/direction';
+
 
 const Intersection = () => {
   const [complete, setComplete] = useState(false);
@@ -22,25 +25,25 @@ const Intersection = () => {
       <div className="upperSection flex">
         <div className="flex flex-right left">
           <Timer start={true} initialTime={30} complete={completeCallback} />
-          <TrafficLight />
+          <TrafficLight status={status.GO} turnDirection={direction.EAST}/>
         </div>
         <South />
         <North />
         <div className="flex right">
           <Timer start={true} initialTime={30} complete={completeCallback} />
-          <TrafficLight />
+          {/* <TrafficLight status={status.STOP}/> */}
         </div>
       </div>
       <East />
       <West />
       <div className="lowerSection flex">
         <div className="flex flex-right  left">
-          <TrafficLight />
+          {/* <TrafficLight /> */}
         </div>
         <South />
         <North />
         <div className="flex right">
-          <TrafficLight />
+          {/* <TrafficLight /> */}
         </div>
       </div>
     </div>

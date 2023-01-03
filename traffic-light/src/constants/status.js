@@ -1,6 +1,6 @@
 export let status = {
-    STOP,
-    READY,
-    GO,
-    GOTURN
+    STOP: 'STOP',
+    READ: 'READY',
+    GO: 'GO',
+    GOTURN: 'GOTURN'
 }
