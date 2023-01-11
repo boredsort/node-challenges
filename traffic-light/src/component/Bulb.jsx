@@ -21,21 +21,18 @@ const Bulb = ({ assignedColor, on, turn }) => {
     } else {
       setColor("grey");
     }
-    console.log("on state", onState);
   }, [onState]);
 
   const getTurnArrow = (turn) => {
     let d;
     let transform;
-    console.log('direction', direction)
-    console.log('turn', turn)
     switch (turn) {
       case direction.NORTH:
         d = pathDirection.NORTH.d;
         transform = pathDirection.NORTH.transform;
         break;
       case direction.EAST:
-        d = pathDirection.EAST.d;
+        d = pathDirection.EAST.props.d;
         break;
       case direction.WEST:
         d = pathDirection.WEST.d;
@@ -49,13 +46,17 @@ const Bulb = ({ assignedColor, on, turn }) => {
         break;
     }
 
-    let path = <path stroke={assignedColor} fill={assignedColor} d={d}/>;
+    let path = <path stroke={assignedColor} fill={assignedColor} d={d} />;
     if (transform) {
-      path = <path stroke={assignedColor} fill={assignedColor} d={d} transform={transform}/>;
+      path = (
+        <path
+          stroke={assignedColor}
+          fill={assignedColor}
+          d={d}
+          transform={transform}
+        />
+      );
     }
-    console.log('pathDirection', pathDirection.EAST.d)
-    console.log('path', path)
-    console.log('d', d)
     return path;
   };
 

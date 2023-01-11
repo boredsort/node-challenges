@@ -8,17 +8,15 @@ const TrafficLight = ({ status, turnDirection }) => {
   let [goturn, setGoTurn] = useState(0);
 
   useEffect(() => {
-    if (status){
+    if (status) {
       cycleStatus(status);
     }
-   
-
-  },[]);
+  }, []);
 
   const cycleStatus = (status) => {
-    console.log(status)
-    console.log('stop', stop)
-    console.log('ready', ready)
+    console.log(status);
+    console.log("stop", stop);
+    console.log("ready", ready);
     switch (status) {
       case status.STOP:
         setStop(1);
@@ -38,25 +36,30 @@ const TrafficLight = ({ status, turnDirection }) => {
         setGo(1);
         setGoTurn(0);
         break;
+      case status.GOTURN:
+        setStop(0);
+        setReady(0);
+        setGo(1);
+        setGoTurn(0);
+        break;
       default:
         setStop(0);
         setReady(0);
         setGo(0);
         setGoTurn(0);
-
     }
-  }
+  };
 
   return (
     <>
       <div className="trafficLight">
-        <Bulb assignedColor="red" on={0} />
+        <Bulb assignedColor="red" on={stop} />
         <br />
-        <Bulb assignedColor="orange" on={0} />
+        <Bulb assignedColor="orange" on={ready} />
         <br />
-        <Bulb assignedColor="green"  on={0}/>
+        <Bulb assignedColor="green" on={go} />
         <br />
-        <Bulb assignedColor="green" turn={turnDirection} on={1}/>
+        <Bulb assignedColor="green" turn={turnDirection} on={goturn} />
         <br />
       </div>
     </>
